@@ -1,0 +1,49 @@
+{% load static %}
+      {% include 'partils/header.html' %}
+      <!----------------------------------> 
+      <hr>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="two-slider">
+                  <h4>سیپی</h4>
+                  <div class="owl-carousel owl-theme ov2">
+                     {% for cp in cp %}
+                     <div class="ite">
+                        {% if cp.status == 'موجود' %}
+                        <p class="mojood">{{cp.status}}</p>
+                        <figure class="figure">
+                           <a href="{% url 'post:detail' cp.slug %}"><img src="{{cp.image.url}}" class="w-100" /></a>
+                           <hr>
+                           <h5 style="margin-bottom:30px;">{{cp.onvan}}</h5>
+                           <hr>
+                           <div class="div-span"><span class="span">{{cp.price}}</span></div>
+                           <h5 >وضعیت : {{cp.status}}</h5>
+                           <hr>
+                           <a href="{% url 'post:detail' cp.slug %}" target="_block">
+                           <div class="div-kharid"><h3 class="kharid">خرید</h3></div>
+                           </a>
+                        </figure>
+                        {% else %}
+                        <p class="namojood">{{cp.status}}</p>
+                        <figure class="figure">
+                           <img src="{{cp.image.url}}" class="w-100" />
+                           <hr>
+                           <h5 style="margin-bottom:30px;">{{cp.onvan}}</h5>
+                           <hr>
+                           <div class="div-span"><span class="span">{{cp.price}}</span></div>
+                           <h5 >وضعیت : {{cp.status}}</h5>
+                           <hr>
+                           <div class="div-kharid" style="background-color:red;"><h3 class="kharid">{{cp.status}}</h3></div>
+                        </figure>
+                        {% endif %}
+                     </div>
+                     {% endfor %}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!----------------------------------> 
+      {% include 'partils/footer.html' %} 
+      

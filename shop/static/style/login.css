@@ -1,0 +1,79 @@
+.main{
+    margin-right: 10%;
+    margin-left: 10%;
+    padding-top:5rem;
+    padding-bottom:5rem;
+}
+.login , .signup{
+    background-color:#e5e7eb;
+    padding:2.5rem;
+    border-radius: 1.5rem;
+}
+.login-lable , .signup-lable{
+    box-sizing:border-box;
+    margin-top: 20px;
+    
+}
+label{
+    text-align: right;
+    margin-bottom: 0.5rem;
+}
+.login-signup{
+    box-sizing: border-box;
+    border-width: 0px;
+    border-style: solid;
+}
+.login-input , .signup-input{
+    border-radius: 1rem;
+    height: 3.1rem;
+    line-height: 1.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    border:0px;
+}
+.submit{
+    width:100%;
+    border-color: transparent;
+    border-radius: 1rem;
+    border-style: solid;
+    border-width: 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    user-select: none;
+    white-space: nowrap;
+    gap: 0.75rem;
+    height: 3.1rem;
+    background-color: blue;
+    color:white;
+}
+.hesab{
+    margin-top: 40px;
+}
+
+.alert {
+    color:black;
+    border-radius: 1rem;
+    text-align: center;
+}
+.alert-error {
+    color:black;
+    border-radius: 1rem;
+    text-align: center;
+    background-color:#edd4d4;
+}
+.alert-success {
+    color:black;
+    border-radius: 1rem;
+    text-align: center;
+    background-color:#d4edda;
+}
+

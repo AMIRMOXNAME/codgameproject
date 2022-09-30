@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'style/font-awesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'style/bootstrap.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'style/owl.carousel.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'style/owl.theme.default.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'style/login.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'style/style.css' %}" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+<body class="login-body">
+    <main class="main">
+        <div class="login">
+            <div class="login-page">
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    <strong></strong><u>{{ message }}</u>
+                    <button type="button" class="close" data-dismiss='alert' aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {% endfor %}
+                <h5 class="mb-4"><a href="{% url 'post:index' %}">بازگشت به صفحه اصلی</a></h5>
+                <h1 style="margin-bottom:25px;">ورود به حساب کاربری</h1>    
+                <form method="post">
+                    {% csrf_token %}
+                    <label class="font-weight-bold login-lable mt-4 mr-2" for="username">نام کاربری:</label>
+                    <br>
+                    <input class="login-input" type="username" name="username" placeholder="نام کاربری" >
+                    <br>
+                    <label class="font-weight-bold login-lable mt-4 mr-2" for="password">رمز عبور:</label>
+                    <br>
+                    <input class="login-input" type="password" name="password" placeholder="رمز عبور">
+                    <br>
+                    <input class="submit btn-xl w-full font-weight-bold mt-4"  type="submit" value="ورود">                   
+                </form>
+                <p class="hesab mr-2"><strong class="login-btn">حساب کاربری ندارید؟ </strong><a href="{% url 'post:signup' %}">ثبت نام کنید!</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+

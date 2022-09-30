@@ -1,0 +1,61 @@
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'style/font-awesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'style/bootstrap.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'style/owl.carousel.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'style/owl.theme.default.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'style/login.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'style/style.css' %}" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>    
+<body>
+    <main class="main">
+        <div class="signup">
+            <div class="signup-page">
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    <strong></strong><u>{{ message }}</u>
+                    <button type="button" class="close" data-dismiss='alert' aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {% endfor %}
+                <h5 class="mb-4"><a href="{% url 'post:index' %}">بازگشت به صفحه اصلی</a></h5>
+                <h1 style="margin-bottom:25px;">ثبت نام</h1>    
+                <form method="post">
+                    {% csrf_token %}
+                    <label class="signup-lable font-weight-bold mt-4 mr-2">نام کاربری:</label>
+                    <br>
+                    <input class="login-input" type="username" id="username" name="username" placeholder="نام کاربری">
+                    <br>
+                    <label class="signup-lable font-weight-bold mt-4 mr-2">نام:</label>
+                    <br>
+                    <input class="login-input" type="text" id="fname" name="fname" placeholder="نام">
+                    <br>
+                    <label class="signup-lable font-weight-bold mt-4 mr-2">نام خانوادگی:</label>
+                    <br>
+                    <input class="login-input" type="text" id="lname" name="lname" placeholder="نام خانوادگی">
+                    <br>
+                    <label class="signup-lable font-weight-bold mt-4 mr-2">ایمیل:</label>
+                    <br>
+                    <input class="login-input" type="email" id="email" name="email" placeholder="ایمیل">
+                    <br>
+                    <label class="signup-lable font-weight-bold mt-4 mr-2">رمز عبور:</label>
+                    <br>
+                    <input class="login-input" type="password" id="pass1" name="pass1" placeholder="رمز عبور">
+                    <br>
+                    <label class="signup-lable font-weight-bold mt-4 mr-2">تکرار رمز عبور:</label>
+                    <br>
+                    <input class="login-input" type="password" id="pass2" name="pass2" placeholder="تکرار رمز عبور" >
+                    <br>
+                    <input class="submit btn-xl w-full font-weight-bold mt-4" type="submit" value="ثبت نام">
+                </form>
+                <p class="hesab mr-2"><strong class="login-btn">حساب کاربری دارید؟ </strong><a href="{% url 'post:login' %}">وارد شوید!</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,76 @@
+{% load static %}
+   {% include 'partils/header.html' %}      
+      <!----------------------------------> 
+      <hr>
+      <style>
+        .div-detail {
+            width: 80%;
+            height:600px;
+            margin-right: 10%;
+            margin-left:10%;
+            padding-top:35px;
+            padding-bottom: 35px;
+            padding-left: 35px;
+            padding-right: 35px;
+            background-color: #e5e7eb;
+        }
+        .div-detail-2{
+        width: 95%;
+        height: 100%;
+        margin-right: 2.5%;
+        margin-left: 2.5%;
+        padding-top: 2.5%;
+        padding-bottom: 35px;
+        padding-right: 35px;
+        border-radius: 20px;
+        background-color:white;
+        background-position: center
+        }
+        .div-image {
+            height:200px;
+            margin-left: 68%;
+        }
+        .image-detail{
+            border-radius:20px;
+            width: 33.333%;
+            margin-right: 33.333%;
+
+        }
+        .div-detail-3{
+            max-width: 100%;
+        }
+        .bazgasht{
+            background-color: red;
+            margin-right:95%;
+            direction:ltr;
+            border-radius: 20px;
+        }
+        .detail {
+        margin-right: 80px;
+        margin-left: 80px;
+        padding-right: 15px;
+        padding-left: 15px;
+        }
+        .text-detail{
+            font-size:20px;
+        }
+      </style>       
+    <div class="div-detail">
+        <div class="div-detail-2">
+            <div class="detail">
+                <img class="image-detail" src="{{cp.image.url}}">
+                <div class="text-detail">
+                    <br>
+                    <h1>{{cp.onvan}}</h1>
+                    <hr>
+                    <ul>
+                        <li><h5>زمان فعال سازی:</h5></li>
+                        <li><h5>وضعیت:</h5></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!----------------------------------> 
+      {% include 'partils/footer.html' %} 
+    
