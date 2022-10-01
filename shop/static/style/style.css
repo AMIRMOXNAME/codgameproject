@@ -56,10 +56,8 @@ padding:15px;
 background-color:#e5e7eb;	
 }
 
-.top2 .login{
+.top2 {    
 text-align:center;
-margin-top:5px;
-margin-right: 238px;
 }
 
 .top2 .mybtn{
@@ -236,7 +234,7 @@ line-height: 2.5;
 
 
 
-.slider-box .col-md-6{
+.slider-box .col-md-6 .navbar-1{
 float:right;
 }
 
@@ -327,7 +325,7 @@ text-align:center;
 transform:rotate(45deg)
 }
 
-.vizheh .col-md-6{
+.vizheh .col-md-6 .navbar-1{
 float:right;	
 }
 
@@ -1028,6 +1026,36 @@ transition:all 0.2s;
 -moz-transition:all 0.2s;
 -o-transition:all 0.2s;
 }
+@media(min-width: 360px) and (max-width:600px){
+    .top2{
+        height: 130px;
+    }
+    .col-md-6{
+        top:3.8rem;
+    }
+    .navbar-1{
+        right: 11px;
+        bottom:2rem;
+        text-align: left;
+    }
+}
+
+@media(min-width: 600px){
+    .login{
+      text-align:center;
+      margin-top:5px;
+      margin-right: 100px;
+    }
+}
+@media(min-width: 768px){
+    .login{
+
+    text-align:center;
+    margin-top:5px;
+    margin-right: 238px;
+    }
+}
+
 
 
 

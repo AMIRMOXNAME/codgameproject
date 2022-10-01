@@ -3,8 +3,9 @@
 <!doctype html>
 <html>
    <head>
-      <meta charset="utf-8">
+      <meta charset="utf-8" >
       <title>Easy Shop</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="{% static 'style/font-awesome.css' %}" rel="stylesheet" type="text/css">
       <link href="{% static 'style/bootstrap.css' %}" rel="stylesheet" type="text/css">
       <link href="{% static 'style/owl.carousel.css' %}" rel="stylesheet" type="text/css">
@@ -30,7 +31,7 @@
                      <button type="submit" ><i class="fa fa-search"></i></button>
                   </form>
                </div>
-               <div class="col-md-6">
+               <div class="navbar-1">
                   <div class="login">
                      <a href="#" class="sabad"><i class="fa fa-cart-arrow-down"></i> سبد خرید</a>
                      {% if request.user.is_authenticated %}
