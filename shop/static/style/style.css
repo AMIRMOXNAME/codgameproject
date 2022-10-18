@@ -1026,35 +1026,99 @@ transition:all 0.2s;
 -moz-transition:all 0.2s;
 -o-transition:all 0.2s;
 }
-@media(min-width: 360px) and (max-width:600px){
+@media(max-width:360px) {
     .top2{
         height: 130px;
     }
     .col-md-6{
         top:3.8rem;
+        left: 1.6rem;
+        font-size:12px;
+        text-align: left;
+    }
+    .navbar-1{
+        right: 15px;
+        bottom:2rem;
+        text-align: left;
+    }
+    .login-page{
+        padding: 0.75rem;
+    }
+    .signup{
+        padding:1.5rem;
+    }
+    .sabad {
+        padding: 13px;
+        color: #e5e7eb;
+        background-color: black;
+        border-radius: 20px;
+        font-size: 12.5px;
+        transition: all 0.2s;
+        sition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -o-transition: all 0.2s;
+    }
+    .top2 .mybtn {
+        font-size: 12px;
+    }
+}
+@media(min-width:360px) and (max-width:540px){
+    .top2{
+        height: 130px;
+    }
+    .col-md-6{
+        top: 3.8rem;
+        left: 1.8rem;
+        text-align: left;
     }
     .navbar-1{
         right: 11px;
         bottom:2rem;
         text-align: left;
     }
-}
-
-@media(min-width: 600px){
-    .login{
-      text-align:center;
-      margin-top:5px;
-      margin-right: 100px;
+    .login-page{
+        padding: 0.75rem;
+    }
+    .signup{
+        padding:1.5rem;
     }
 }
-@media(min-width: 768px){
-    .login{
 
-    text-align:center;
-    margin-top:5px;
-    margin-right: 238px;
+@media(min-width: 540px) and (max-width: 768px){
+    .top2{
+        height: 130px;
+    }
+    .col-md-6{
+        top: 3.8rem;
+        left: 1.8rem;
+        text-align: left;
+    }
+    .navbar-1{
+        right: 11px;
+        bottom:2rem;
+        text-align: left;
+    }
+    .login-page{
+        padding: 0.75rem;
+    }
+    .signup{
+        padding:1.5rem;
+    }
+
+}
+@media(min-width: 768px) and (max-width: 1024px){
+    .navbar-1{
+        margin-top:5px;
+        text-align: left;
     }
 }
+@media(min-width: 1024px){
+    .navbar-1{
+        margin-top:5px;
+        text-align:left;
+    }
+}
+
 
 
 

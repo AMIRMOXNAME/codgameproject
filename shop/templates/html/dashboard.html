@@ -1,12 +1,29 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+    {% include 'partils/header.html' %}
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="{% static 'style/dashboard.css' %}" rel="stylesheet" type="text/css">
+    <title>داشبورد</title>
+    <meta charset="utf-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 </head>
 <body>
-    <a href="{% url 'post:logout' %}"><p>خروج از حساب کاربری</p></a>
+    {% if request.user.is_authenticated %}
+    <div class="dashboard">
+        <div class="dashboard-2">
+            <h1 class="dashboard-matn">داشبورد {{user.first_name}} {{user.last_name}}</h1>
+            <div class="dashboard-detail">
+                <ul>
+                    <li class="dashboard-li"><a href="#"><h4 style='color:black'>مشخصات کاربری</h4></a></li>
+                    <li class="dashboard-li"><a href="#"><h4 style='color:black'>تراکنش ها</h4></a></li>
+                    <li class="dashboard-li"><a href="{% url 'post:logout' %}"><h4 style='color:black'>خروج از حساب کاربری</h4></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <a href="{% url 'post:login' %}"><h1>ابتدا وارد شوید!</h1></a>
+    {% endif %}
 </body>
 </html>
